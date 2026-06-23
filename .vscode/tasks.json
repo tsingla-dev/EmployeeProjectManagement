@@ -1,0 +1,20 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compile EPM",
+      "type": "shell",
+      "command": "find src/main/java -name '*.java' | xargs javac -cp 'lib/mysql-connector-j-8.3.0.jar' -d out",
+      "group": "build",
+      "presentation": { "reveal": "always" }
+    },
+    {
+      "label": "Run EPM",
+      "type": "shell",
+      "command": "java -cp 'out:lib/mysql-connector-j-8.3.0.jar' com.epm.ui.MainMenu",
+      "group": { "kind": "build", "isDefault": true },
+      "dependsOn": "Compile EPM",
+      "presentation": { "reveal": "always" }
+    }
+  ]
+}

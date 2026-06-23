@@ -2,7 +2,6 @@ package com.epm.ui;
 
 import com.epm.reports.ReportDAO;
 import com.epm.util.InputHelper;
-
 import java.sql.SQLException;
 
 public class ReportsMenu {

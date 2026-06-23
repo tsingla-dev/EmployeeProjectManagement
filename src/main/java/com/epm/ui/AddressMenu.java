@@ -3,7 +3,6 @@ package com.epm.ui;
 import com.epm.model.EmployeeAddress;
 import com.epm.service.AddressService;
 import com.epm.util.InputHelper;
-
 import java.sql.SQLException;
 
 public class AddressMenu {

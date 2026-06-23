@@ -3,7 +3,6 @@ package com.epm.ui;
 import com.epm.model.Department;
 import com.epm.service.DepartmentService;
 import com.epm.util.InputHelper;
-
 import java.sql.SQLException;
 import java.util.List;
 

@@ -63,19 +63,19 @@ echo 'export PATH="/usr/local/opt/openjdk@17/bin:$PATH"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
-#### 2. Install MySQL
+#### 2. Install MySQL from brew or from straight up google chrome
 ```bash
 brew install mysql
 brew services start mysql
-mysql_secure_installation   # set root password to: root
+mysql_secure_installation   
 ```
 
 #### 3. Create the Database
 ```bash
 mysql -u root -p
-# Enter password: root
+
 ```
-Then paste or run the schema:
+
 ```bash
 mysql -u root -p < schema.sql
 ```
@@ -88,7 +88,7 @@ mysql -u root -p < schema.sql
 #### 5. Configure Database Password
 Open `src/main/java/com/epm/util/DBConnection.java` and set:
 ```java
-private static final String PASSWORD = "root"; // ← your MySQL root password
+private static final String PASSWORD = "Tanvi@2006"; 
 ```
 
 #### 6. Compile & Run
@@ -116,12 +116,12 @@ src/main/java/com/epm/
 
 ## Assumptions
 
-1. MySQL root password is `root` by default (change in DBConnection.java if different).
+1. MySQL root password is `Tanvi@2006` .
 2. Dates are entered in `yyyy-MM-dd` format.
 3. Deleting a Department fails if employees still belong to it (referential integrity).
 4. Deleting an Employee cascades to delete their address and project assignments.
 5. Employee-Project assignment uses a database transaction that validates both IDs before committing.
-6. The `lib/` directory holds the MySQL JAR but it is excluded from Git (see `.gitignore`).
+
 
 ---
 

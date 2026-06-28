@@ -88,7 +88,7 @@ mysql -u root -p < schema.sql
 #### 5. Configure Database Password
 Open `src/main/java/com/epm/util/DBConnection.java` and set:
 ```java
-private static final String PASSWORD = "Tanvi@2006"; 
+private static final String PASSWORD = "root"; 
 ```
 
 #### 6. Compile & Run

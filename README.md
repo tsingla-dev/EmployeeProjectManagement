@@ -116,7 +116,7 @@ src/main/java/com/epm/
 
 ## Assumptions
 
-1. MySQL root password is `Tanvi@2006` .
+1. MySQL root password is `root` .
 2. Dates are entered in `yyyy-MM-dd` format.
 3. Deleting a Department fails if employees still belong to it (referential integrity).
 4. Deleting an Employee cascades to delete their address and project assignments.
